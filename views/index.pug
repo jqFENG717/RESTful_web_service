@@ -1,0 +1,48 @@
+extends layout
+
+block content
+    h1= title
+    p Welcome to Wendy's RESTful Web Service.
+
+    // Wrapper
+    #wrapper
+
+        // CONTACT INFO
+        h2 Contact Info
+        #contactInfo
+            p#leftP
+                strong Name:
+                |  <span id='contactInfoName'></span>
+                br
+                strong Telephone:
+                |  <span id='contactInfoTel'></span>
+                br
+                strong Email:
+                |  <span id='contactInfoEmail'></span>
+                br
+        // /CONTACT INFO
+
+        // CONTACT LIST
+        h2 Contact List
+        #contactList
+            table
+                thead
+                    th Name
+                    th Delete?
+                tbody
+        // /CONTACT LIST
+
+        // ADD OR UPDATE CONTACT
+        h2 Add/Update Contact
+        #addOrUpdateContact
+            fieldset
+                input#inputContactName(type='text', placeholder='Name')
+                br
+                input#inputContactTel(type='text', placeholder='Telephone Number')
+                br
+                input#inputContactEmail(type='text', placeholder='Email')
+                br
+                button(type='button',id='btnAddUpdateContact',class='myButton') Add/Update Contact
+        // /ADD OR UPDATE CONTACT
+
+    // /WRAPPER
